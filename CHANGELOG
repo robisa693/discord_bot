@@ -1,4 +1,9 @@
 VERSION |   DATE      |   AUTHOR
+1.0.0       2019-10-19    Roberto
+CHANGED: changed filename of files in cogs/ to exclude them for now
+ADDED: JOIN, LEAVE, PLAY commands to play youtube music
+
+VERSION |   DATE      |   AUTHOR
 0.5.1       2019-10-19    Roberto
 ADDED: cogs folder with example scripts
        cogs loader,unloader and reloader in bot.py

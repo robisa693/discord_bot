@@ -1,7 +1,11 @@
+Intall ffmpeg to your windows/linux machine
+pip install youtube_dl, discord.py, PyNaCl
+
+
 To run bot just add a .config.ini file in docs formatted like this:
 
 [auth]
 discord_token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 
-And then run bot.py
+And then run bot.py with python3.x
