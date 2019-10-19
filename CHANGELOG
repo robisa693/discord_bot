@@ -1,4 +1,10 @@
 VERSION |   DATE      |   AUTHOR
+0.5.1       2019-10-19    Roberto
+ADDED: cogs folder with example scripts
+       cogs loader,unloader and reloader in bot.py
+
+
+VERSION |   DATE      |   AUTHOR
 0.0.1       2019-10-19    Roberto
 ADDED: docs folder
        logs folder

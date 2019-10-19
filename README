@@ -1,0 +1,7 @@
+To run bot just add a .config.ini file in docs formatted like this:
+
+[auth]
+discord_token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+And then run bot.py
