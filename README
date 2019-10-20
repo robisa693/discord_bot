@@ -9,3 +9,6 @@ discord_token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 
 And then run bot.py with python3.x
+
+
+Current supported commands are -join, -leave and -play 'youtube-url'
