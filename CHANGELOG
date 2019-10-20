@@ -1,4 +1,8 @@
 VERSION |   DATE      |   AUTHOR
+1.0.1       2019-10-20    Roberto
+ADDED: -pause, -resume, -stop commands
+
+VERSION |   DATE      |   AUTHOR
 1.0.0       2019-10-19    Roberto
 CHANGED: changed filename of files in cogs/ to exclude them for now
 ADDED: JOIN, LEAVE, PLAY commands to play youtube music

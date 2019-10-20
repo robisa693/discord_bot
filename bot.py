@@ -67,6 +67,7 @@ async def play(ctx, url: str):
     voice = get(client.voice_clients, guild=ctx.guild)
     ydl_opts = {
         'format': 'bestaudio/best',
+        'quiet' : True,
         'postprocessors': [{
             'key': 'FFmpegExtractAudio',
             'preferredcodec': 'mp3',
@@ -83,11 +84,45 @@ async def play(ctx, url: str):
             os.rename(file, 'song.mp3')
     voice.play(discord.FFmpegPCMAudio("song.mp3"), after=lambda e: print(f'{name} has finsished playing'))
     voice.source = discord.PCMVolumeTransformer(voice.source)
-    voice.source.volume = 0.30
+    voice.source.volume = 0.80
 
     nname = name.rsplit("-", 2)
     await ctx.send(f'Playing: {nname}')
     print("Playing")
+
+@client.command(pass_context=True)
+async def pause(ctx):
+    voice = get(client.voice_clients, guild = ctx.guild)
+    if voice and voice.is_playing():
+        voice.pause()
+        print("Paused music")
+        await ctx.send("Music paused.")
+    else:
+        print("Nothing to pause")
+        await ctx.send("Nothing playing.")
+
+@client.command(pass_context=True)
+async def resume(ctx):
+    voice = get(client.voice_clients, guild=ctx.guild)
+    if voice and voice.is_paused():
+        print("Resuming music")
+        voice.resume()
+        await ctx.send("Resuming music")
+    else:
+        print("Can't resume music")
+        await ctx.send("Can't resume music that isn paused")
+
+@client.command(pass_context=True)
+async def stop(ctx):
+    voice = get(client.voice_clients, guild=ctx.guild)
+    if voice and voice.is_playing():
+        voice.stop()
+        print("Stopping")
+        await ctx.send("Music stopped.")
+    else:
+        print("No music playing, failed to stop")
+        await ctx.send("Nothing is playing.")
+
 
 @client.command()
 async def load(ctx, extension):
