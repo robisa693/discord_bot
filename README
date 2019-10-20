@@ -12,3 +12,4 @@ And then run bot.py with python3.x
 
 
 Current supported commands are -join, -leave and -play 'youtube-url'
+In version 1.0.1 support was added for -pause, -resume and -stop
